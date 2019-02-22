@@ -12,20 +12,20 @@ int main(int argc, char* argv[])\n\
 {\n\
     srand(time(NULL));\n\
     int result = 0;\n\
-    for (int i=0; i< 100000000; i++) {\n\
-        switch(rand() %" + iterations + ") {");
-for (let i =0 ; i < iterations ; i++) {
+    for (int i=0; i< " + Math.floor(1000000000 / iterations) + "; i++) {\n\
+        int code = i & 1 == 0 ? i % " + iterations + ": (i + " + Math.floor(iterations / 2) + ") % " + iterations + ";\n\
+        if (code == 0) {\n\
+            result +=1;\n\
+        }\n\
+");
+for (let i =1 ; i < iterations ; i++) {
     console.log("\n\
-        case " + i + "\
-        :\n        result += " 
+        else if (code == " + i + ") {\n\
+                result += " 
             + Math.floor(Math.random() * 100) 
-            + ";\n        break;\n");
+            + ";\n        }\n");
 }        
 console.log("\
-        default:\n\
-            result += 0;\n\
-            break;\n\
-        }\n\
     }\n\
     std::cout << result << std::endl;\n\
     return result;\n\
