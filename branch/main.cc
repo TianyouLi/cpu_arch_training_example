@@ -20,6 +20,16 @@ int main(int argc, char* argv[])
             result += 3;
         } else if (code == 4) {
             result += 4;
+        } else if (code == 5) {
+            result += 5;
+        } else if (code == 6) {
+            result += 6;
+        } else if (code == 7) {
+            result += 7;
+        } else if (code == 8) {
+            result += 8;
+        } else if (code == 9) {
+            result += 9;
         } else {
             result +=5;
         }
